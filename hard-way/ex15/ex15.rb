@@ -1,4 +1,4 @@
-    filename = ARGV.first
+filename = ARGV.first
 
     txt = open(filename)
 

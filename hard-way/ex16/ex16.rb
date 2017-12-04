@@ -1,9 +1,12 @@
+#This initializes the file to be opened/created/erased
 filename = ARGV.first
 
+#Just some initial instructions that are printed tot he screen that include what we are doing with this program.
 puts "We're going to erase #{filename}"
 puts "If you don't want that, hit CRTL-C (^C)."
 puts "If you do want that, hit RETURN."
 
+#This 'gets' what we choose above
 $stdin.gets
 
 puts "Opening the file..."
