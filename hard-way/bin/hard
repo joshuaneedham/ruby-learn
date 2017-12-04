@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+require_relative '../lib/hard.rb'
+
+# exercise_one
+# exercise_two
+# exercise_three
+# exercise_four
+# exercise_five
+# exercise_six
+# exercise_seven
+# exercise_eight
+# exercise_nine
+# exercise_ten
+# exercise_eleven
+# exercise_twelve
+# exercise_thirteen
+exercise_fourteen
