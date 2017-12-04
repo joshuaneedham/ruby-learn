@@ -2,7 +2,7 @@
 This repository includes various code learning exercises that I complete from multiple learning sources.
 
 Included sources:
-* Learn Ruby the hard way - Zed Shaw
-* RubyMonk
-* Learn to program - Chris Pine
+* Learn Ruby the hard way - Zed Shaw - https://LearnRubyTheHardWay.com/book/
+* RubyMonk - https://RubyMonk.com
+* Learn to program - Chris Pine - https://pine.fm/LearnToProgram/
 
