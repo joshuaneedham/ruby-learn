@@ -1,5 +1,5 @@
 filename = ARGV.first
 
-File.open("#{filename, 'r'}").each do |line|
+File.open("#{filename}").each do |line|
     puts line
 end
