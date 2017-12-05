@@ -473,7 +473,7 @@ def exercise_twentyone # Functions Can Return Something
 end
 
 def exercise_twentytwo # What Do You Know So Far?
-
+    puts "Review everything up to this point and memorize all the various aspects of Ruby that have been addressed up to this point. It will help to solidify what we are learning here."
 end
 
 def exercise_twentythree # Read Some Code
