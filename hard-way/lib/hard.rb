@@ -260,31 +260,216 @@ def exercise_fourteen # Prompting and Passing
 end
 
 def exercise_fifteen # Reading Files
+    # '../ex15/ex15_sample.txt'
+    filename = ARGV.first
     
+        txt = open(filename)
+    
+        puts "Here's your file #{filename}:"
+        print txt.read
+    
+        print "Type the filename again: "
+        file_again = $stdin.gets.chomp
+        
+        txt_again = open(file_again)
+    
+        print txt_again.read
 end
 
 def exercise_sixteen # Reading and Writing Files
-    
+    # '../ex16/text-input.txt'
+    # '../ex16/read.rb'
+    #This initializes the file to be opened/created/erased
+    filename = ARGV.first
+
+    #Just some initial instructions that are printed tot he screen that include what we are doing with this program.
+    puts "We're going to erase #{filename}"
+    puts "If you don't want that, hit CRTL-C (^C)."
+    puts "If you do want that, hit RETURN."
+
+    #This 'gets' what we choose above
+    $stdin.gets
+
+    puts "Opening the file..."
+    target = open(filename, 'w')
+
+    puts "Truncating the file. Goodbye!"
+    target.truncate(0)
+
+    puts "Now I'm going to ask you for three lines."
+
+    print "line1 : "
+    line1 = $stdin.gets.chomp
+    print "line 2: "
+    line2 = $stdin.gets.chomp
+    print "line 3: "
+    line3 = $stdin.gets.chomp
+
+    puts "I'm going to write these to the file."
+
+    target.write(line1)
+    target.write("\n")
+    target.write(line2)
+    target.write("\n")
+    target.write(line3)
+    target.write("\n")
+
+    puts "And finally, we close it."
+    target.close        
 end
 
 def exercise_seventeen # More Files
+    # '../ex17/test.txt'
+    in_file = open(from_file)
+    indata = in_file.read
     
+    puts "The input file is #{indata.length} bytes long"
+    
+    puts "Does the output file exist? #{File.exist?(to_file)}"
+    puts "Ready, hit RETURN to continue, CTRL-C to abort."
+    $stdin.gets
+    out_file = open(to_file, 'w')
+    out_file.write(indata)
+    
+    puts "Alright, all done."
+    
+    out_file.close
+    in_file.close   
 end
 
 def exercise_eighteen # Names, Variables, Code, Functions
-    
+    #this on is like your scripts with ARGV
+    def print_two(*args)
+        arg1, arg2 = args
+        puts "arg1: #{arg1}, arg2: #{arg2}"
+    end
+
+    # ok, that *args is actually pointless, we can just do this
+    def print_two_again(arg1, arg2)
+        puts "arg1: #{arg1}, arg2: #{arg2}"
+    end
+
+    # this just takes one argument
+    def print_one(arg1)
+        puts "arg1: #{arg1}"
+    end
+
+    # this one takes no arguments
+    def print_none()
+        puts "I got nothin'."
+    end
+
+    print_two("Zed", "Shaw")
+    print_two_again("Zed", "Shaw")
+    print_one("First!")
+    print_none()
 end
 
 def exercise_nineteen # Functions and Variables
-    
+    # Exercise 19: Functions and Variables
+
+    # Setting up our method - method name = cheese_and_crackers, arguments(variables) = cheese_count, boxes_of_crackers
+    def cheese_and_crackers(cheese_count, boxes_of_crackers)
+        puts "You have #{cheese_count} cheeses!" # Interpolates our cheese_count argument
+        puts "You have #{boxes_of_crackers} boxes of crackers!" # Interpolates our boxes_of_crackers argument.
+        puts "Man that's enough for a party!"
+        puts "Get a blanket.\n"
+    end
+
+    puts "We can just give the function numbers directly:"
+    cheese_and_crackers(20, 30)
+
+    puts "OR, we can use variables from our script:"
+    amount_of_cheese = 10
+    amount_of_crackers = 50
+
+    cheese_and_crackers(amount_of_cheese, amount_of_crackers)
+
+    puts "We can even do math inside too:"
+    cheese_and_crackers(10+20, 5+6)
+
+    puts "And we can combine the two, variables and math:"
+    cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)    
 end
 
 def exercise_twenty # Functions and Files
+    # '../ex20/test.txt'
+    input_file = ARGV.first
     
+    def print_all(f)
+        puts f.read
+    end
+    
+    def rewind(f)
+        f.seek(0)
+    end
+    
+    def print_a_line(line_count, f)
+        puts "#{line_count}, #{f.gets.chomp}"
+    end
+    
+    current_file = open(input_file)
+    
+    puts "First let's print the whole file:\n"
+    
+    print_all(current_file)
+    
+    puts "Now let's rewind, kind of like a tape."
+    
+    rewind(current_file)
+    
+    puts "Let's print three lines:"
+    
+    current_line = 1
+    print_a_line(current_line, current_file)
+    
+    current_line = current_line + 1
+    print_a_line(current_line, current_file)
+    
+    current_line = current_line + 1
+    print_a_line(current_line, current_file)
 end
 
 def exercise_twentyone # Functions Can Return Something
+    def add(a, b)
+        puts "ADDING #{a} + #{b}"
+        return a + b
+    end
     
+    def subtract(a, b)
+        puts "SUBTRACTING #{a} - #{b}"
+        return a - b
+    end
+    
+    def multiply(a, b)
+        puts "MULTIPLYING #{a} * #{b}"
+        return a * b
+    end
+    
+    def divide(a, b)
+        puts "DIVIDING #{a} / #{b}"
+        return a / b
+    end
+    
+    puts "Let's do some math with just functions!"
+    
+        age = add(30, 5)
+        height = subtract(78, 4)
+        weight = multiply(90, 2)
+        iq = divide(100, 2)
+    
+        puts "Age: #{age}, Height: #{height}, Weight: #{weight}, IQ: #{iq}"
+    
+        # A puzzle for the extra credit, type it in anyway
+    
+        puts "Here is the puzzle"
+    
+        what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
+    
+    
+        puts "That becomes #{what}. Can you do it by hand?"
+    
+        puts "We take our IQ of #{iq} and Divide it by 2 which gives us #{iq / 2 }\nthen we Multiply our Weight which is #{weight} times #{iq / 2} and we get #{multiply(weight, divide(iq,2))}\nthen we Subtract our Height of #{height} to get #{subtract(height, divide(iq, 2))}\nwhich we then Add our Age #{age} too to get the final result of #{what}"     
 end
 
 def exercise_twentytwo # What Do You Know So Far?
