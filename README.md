@@ -6,3 +6,6 @@ Included sources:
 * RubyMonk - https://RubyMonk.com
 * Learn to program - Chris Pine - https://pine.fm/LearnToProgram/
 
+
+Resource links for further reading:
+* AirBnB Ruby Style Guide - https://github.com/airbnb/ruby#whitespace
