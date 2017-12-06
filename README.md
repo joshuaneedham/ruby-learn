@@ -3,9 +3,9 @@ This repository includes various code learning exercises that I complete from mu
 
 Included sources:
 * Learn Ruby the hard way - Zed Shaw - <a href="https://LearnRubyTheHardWay.com/book/" target="_blank">https://LearnRubyTheHardWay.com/book/</a>
-* RubyMonk - https://RubyMonk.com
-* Learn to program - Chris Pine - https://pine.fm/LearnToProgram/
+* RubyMonk - <a href="https://RubyMonk.com" target="_blank">https://RubyMonk.com</a>
+* Learn to program - Chris Pine - <a href="https://pine.fm/LearnToProgram/" target="_blank">https://pine.fm/LearnToProgram/</a>
 
 
 Resource links for further reading:
-* AirBnB Ruby Style Guide - https://github.com/airbnb/ruby#whitespace
+* AirBnB Ruby Style Guide - <a href="https://github.com/airbnb/ruby" target="_blank">https://github.com/airbnb/ruby</a>
