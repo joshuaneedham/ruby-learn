@@ -481,33 +481,160 @@ def exercise_twentytwo # What Do You Know So Far?
 end
 
 def exercise_twentythree # Read Some Code
-    
+    puts "Read through a few various projects on GitHub"
 end
 
 def exercise_twentyfour # More Practice
+    puts "Let's practice everything."
+    puts 'You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.'
     
+    # The <<END is a "heredoc". See the Student Questions. If your string happens to contain the word END then you would need to choose something else besides <<END like <<BIGDOC/BIGDOC which would then also be required when done with the string
+    poem = <<END
+    \tThe lovely world
+    with logic so firmly planted
+    cannot disern \n the needs of love
+    nor comprehend passion from intuition
+    and requires an explanation
+    \n\t\twhere there is none.
+    END
+    
+    # The 'puts' before and after calling the poem are for simply decoration.
+    puts "--------------"
+    puts poem
+    puts "--------------"
+    
+    five = 10 - 2 + 3 - 6
+    puts "This should be five: #{five}"
+    
+    def secret_formula(started)
+        jelly_beans = started * 500
+        jars = jelly_beans / 1000
+        crates = jars / 100
+        return jelly_beans, jars, crates
+    end
+    
+    start_point = 10000
+    # Reassigns the secret_formula method variables 
+    beans, jars, crates = secret_formula(start_point)
+    
+    puts "With a starting point of: #{start_point}"
+    # Interpolates the previously set variables
+    puts "We'd have #{beans} beans, #{jars} jars, and #{crates} crates."
+    
+    # Divides the previously set start_point variable of 1000 by 10
+    start_point = start_point / 10
+    puts "We can also do that this way:"
+    puts "We'd have %s beans, %d jars, and %d crates." % secret_formula(start_point)
 end
 
-def exercise_twentyfive
+def exercise_twentyfive # Even More Practice
 
 end
 
-def exercise_twentysix
+def exercise_twentysix # Congratulations, Take A Test!
 
 end
 
-def exercise_twentyseven
+def exercise_twentyseven # Memorizing Logic
 
 end
 
-def exercise_twentyeight
+def exercise_twentyeight # Boolean Practice
 
 end
 
-def exercise_twentynine
+def exercise_twentynine # What If
 
 end
 
-def exercise_thirty
+def exercise_thirty # Else and If
+
+end
+
+def exercise_thirtyone # Making Decisions
+
+end
+
+def exercise_thirtytwo # Loops And Lists
+
+end
+
+def exercise_thirtythree # While Loops
+
+end
+
+def exercise_thirtyfour # Accessing Elements Of Lists
+
+end
+
+def exercise_thirtyfive # Branches And Functions
+
+end
+
+def exercise_thirtysix # Designing And Debugging
+
+end
+
+def exercise_thirtyseven # Symbol Review
+
+end
+
+def exercise_thirtyeight # Doing Things To Lists
+
+end
+
+def exercise_thirtynine # Dictionaries, Oh Lovely Dictionaries
+
+end
+
+def exercise_fourty # Modules, Classes, And Objects
+
+end
+
+def exercise_fourtyone # Learning To Speak Object Oriented
+
+end
+
+def exercise_fourtytwo # Is-A, Has-A, Objects, and Classes
+
+end
+
+def exercise_fourtythree # Gothons From Planet Percal #25
+
+end
+
+def exercise_fourtyfour # Inheritance Vs. Composition
+
+end
+
+def exercise_fourtyfive # You Make A Gem
+
+end
+
+def exercise_fourtysix # A Project Skeleton
+
+end
+
+def exercise_fourtyseven # Automated Testing
+
+end
+
+def exercise_fourtyeight # Advanced User Input
+
+end
+
+def exercise_fourtynine # Making Sentences
+
+end
+
+def exercise_fifty # Your First Website
+
+end
+
+def exercise_fiftyone # Getting Input From A Browser
+
+end
+
+def exercise_fiftytwo # The Start Of Your Web Game
 
 end
